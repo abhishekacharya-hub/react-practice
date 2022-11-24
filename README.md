@@ -41,6 +41,11 @@ Manipulating DOM is slow, but manipulating Virtual DOM is fast as nothing gets d
 
 __what is react component__
 
+Components are the building blocks of any React app and a typical React app will have many of these. Simply put, a component is a JavaScript class or function that optionally accepts inputs i.e. properties(props) and returns a React element that describes how a section of the UI (User Interface) should appear.
+
+In React, a Stateful Component is a component that holds some state. A Stateless component, by contrast, has no state. Note that both types of components can use props.
+
+
 __stateless component__
 
 ```javascript
@@ -60,6 +65,9 @@ const App = () => {
 };
 export default App;
 ```
+
+The above example shows a stateless component named ExampleComponent which is inserted in the <App/> component. The ExampleComponent just comprises of a <h1> element. Although the Stateless component has no state, it still receives data via props from a parent component.
+
 
 __statefull component__
 
@@ -88,3 +96,8 @@ const App = () => {
 export default App;
 
 ```
+
+The above example shows a stateful component named ExampleComponent which is inserted in the <App/> component. The ExampleComponent contains a <input>. First of all, in the ExampleComponent, we need to assign defaultEmail by props to a local state by a useState() hook in ExampleComponent.
+
+Next, we have to pass email to value property of a input tag and pass a function changeEmailHandler to an onChange() event for a purpose keeping track of the current value of the input.
+
