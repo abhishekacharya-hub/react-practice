@@ -37,3 +37,54 @@ __what is virtual dom__
 in React, for every DOM object, there is a corresponding "virtual DOM object". A virtual DOM object is a representation of a DOM object, like a lightweight copy. A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing's power to directly change what's on the screen.
 
 Manipulating DOM is slow, but manipulating Virtual DOM is fast as nothing gets drawn on the screen. So each time there is a change in the state of our application, virtual DOM gets updated first instead of the real DOM.
+
+
+__what is react component__
+
+__stateless component__
+
+```javascript
+import React from "react";
+
+const ExampleComponent = (props) => {
+  return <h1>stateless component - {props.message}</h1>;
+};
+
+const App = () => {
+  const message = "react interview question";
+  return (
+    <>
+      <ExampleComponent message={message} />
+    </>
+  );
+};
+export default App;
+```
+
+__statefull component__
+
+```javascript
+import React, { useState } from "react";
+
+const ExampleComponent = (props) => {
+  const [email, setEmail] = useState(props.defaultEmail);
+
+  const changeEmailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  return <input type="text" value={email} onChange={changeEmailHandler} />;
+};
+
+const App = () => {
+  const defaultEmail = "suniti.mukhopadhyay@gmail.com";
+  return (
+    <div>
+      <ExampleComponent defaultEmail={defaultEmail} />
+    </div>
+  );
+};
+
+export default App;
+
+```
