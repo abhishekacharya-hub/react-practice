@@ -101,3 +101,10 @@ The above example shows a stateful component named ExampleComponent which is ins
 
 Next, we have to pass email to value property of a input tag and pass a function changeEmailHandler to an onChange() event for a purpose keeping track of the current value of the input.
 
+
+
+__What is the difference between Component and Container in React?__
+
+The presentational components are concerned with the look, container components are concerned with making things work.
+
+For example, this is a presentational component. It gets data from its props, and just focuses on showing an element
