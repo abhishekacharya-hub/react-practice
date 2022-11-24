@@ -66,7 +66,7 @@ const App = () => {
 export default App;
 ```
 
-The above example shows a stateless component named ExampleComponent which is inserted in the <App/> component. The ExampleComponent just comprises of a <h1> element. Although the Stateless component has no state, it still receives data via props from a parent component.
+The above example shows a stateless component named ExampleComponent which is inserted in the App/ component. The ExampleComponent just comprises of a h1 element. Although the Stateless component has no state, it still receives data via props from a parent component.
 
 
 __statefull component__
@@ -97,7 +97,7 @@ export default App;
 
 ```
 
-The above example shows a stateful component named ExampleComponent which is inserted in the <App/> component. The ExampleComponent contains a <input>. First of all, in the ExampleComponent, we need to assign defaultEmail by props to a local state by a useState() hook in ExampleComponent.
+The above example shows a stateful component named ExampleComponent which is inserted in the App/ component. The ExampleComponent contains a input. First of all, in the ExampleComponent, we need to assign defaultEmail by props to a local state by a useState() hook in ExampleComponent.
 
 Next, we have to pass email to value property of a input tag and pass a function changeEmailHandler to an onChange() event for a purpose keeping track of the current value of the input.
 
