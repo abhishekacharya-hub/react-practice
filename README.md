@@ -108,3 +108,43 @@ __What is the difference between Component and Container in React?__
 The presentational components are concerned with the look, container components are concerned with making things work.
 
 For example, this is a presentational component. It gets data from its props, and just focuses on showing an element
+
+```javascript
+/**
+ * Presentational Component
+ * 
+ **/
+const Users = props => (
+  <ul>
+    {props.users.map(user => (
+      <li>{user}</li>
+    ))}
+  </ul>
+)
+```
+
+On the other hand this is a container component. It manages and stores its own data, and uses the presentational component to display it.
+
+```javascript
+/**
+ * Container Component
+ * 
+ **/
+class UsersContainer extends React.Component {
+  constructor() {
+    this.state = {
+      users: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get('/users').then(users =>
+      this.setState({ users: users }))
+    )
+  }
+
+  render() {
+    return <Users users={this.state.users} />
+  }
+}
+```
