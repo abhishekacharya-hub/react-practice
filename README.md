@@ -148,3 +148,49 @@ class UsersContainer extends React.Component {
   }
 }
 ```
+
+__how to import and export in react?__
+
+```javascript
+//importing combination
+import React, {component} from 'react';
+import ReactDOM from 'react-dom';
+
+//wrapping component with braces if no dafault exports 
+import {Button} from './Button';
+
+//default export (recommended)
+import Button from './Button';
+
+
+class DangerButton extends Component {
+  render() 
+  {
+    return <Button color = "red"/>
+  }
+}
+export default DangerButton;
+//or export DangerButtion
+```
+
+__diffrence between component and element__
+
+1. __react Element__
+
+it is a simple object that describes a DOM node and its attributes or properties. It is an immutable description object and you can not apply any methods on it.
+
+```javascript
+const element = <h1>React Element Example!</h1>;
+ReactDOM.render(element, document.getElementById('app'));
+```
+
+2. __react Component__
+
+It is a function or class that accepts an input and returns a React element. It has to keep references to its DOM nodes and to the instances of the child components.
+
+```javascript
+function Message() {
+  return <h1>React Component Example</h1>
+}
+ReactDOM.render(</Message>, document.getElementById("app")
+```
