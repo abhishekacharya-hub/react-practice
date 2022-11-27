@@ -206,3 +206,8 @@ After the introduction of React Hooks, writing functional components has become 
 __What are class components in react?__
 
 The class component, a stateful/container component, is a regular ES6 class that extends the component class of the React library. It is called a stateful component because it controls how the state changes and the implementation of the component logic. Aside from that, they have access to all the different phases of a React lifecycle method.
+
+
+__What is Lifting State Up in ReactJS?__
+
+The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js. With the shared state, changes in state reflect in relevant components simultaneously.
