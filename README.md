@@ -200,3 +200,9 @@ __What are functional components in react?__
 A React functional component is a simple JavaScript function that accepts props and returns a React element. It also referred as stateless components as it simply accept data and display them in some form.
 
 After the introduction of React Hooks, writing functional components has become the ​standard way of writing React components in modern applications.
+
+
+
+__What are class components in react?__
+
+The class component, a stateful/container component, is a regular ES6 class that extends the component class of the React library. It is called a stateful component because it controls how the state changes and the implementation of the component logic. Aside from that, they have access to all the different phases of a React lifecycle method.
