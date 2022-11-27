@@ -194,3 +194,9 @@ function Message() {
 }
 ReactDOM.render(</Message>, document.getElementById("app")
 ```
+
+__What are functional components in react?__
+
+A React functional component is a simple JavaScript function that accepts props and returns a React element. It also referred as stateless components as it simply accept data and display them in some form.
+
+After the introduction of React Hooks, writing functional components has become the ​standard way of writing React components in modern applications.
