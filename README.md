@@ -211,3 +211,9 @@ The class component, a stateful/container component, is a regular ES6 class that
 __What is Lifting State Up in ReactJS?__
 
 The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js. With the shared state, changes in state reflect in relevant components simultaneously.
+
+Example:
+
+The App component containing PlayerContent and PlayerDetails component. PlayerContent shows the player name buttons. PlayerDetails shows the details of the in one line.
+
+The app component contains the state for both the component. The selected player is shown once we click on the one of the player button.
